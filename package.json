@@ -1,0 +1,50 @@
+{
+  "name": "@staccx/sanity-plugin-i18n",
+  "version": "10.0.0",
+  "description": "",
+  "main": "lib/translations.js",
+  "module": "lib/translations.js",
+  "author": "Stacc X",
+  "license": "UNLICENSED",
+  "files": [
+    "lib",
+    "src",
+    "sanity.json"
+  ],
+  "scripts": {
+    "start": "sanity start",
+    "test": "sanity check",
+    "build": "babel --root-mode upward src -d lib",
+    "build:watch": "nodemon --watch src/ --exec \"babel src -d dist\"",
+    "prepare": "yarn build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {
+    "@sanity/base": "^0.147.3",
+    "@sanity/components": "^0.147.3",
+    "@sanity/core": "^0.147.3",
+    "@sanity/default-layout": "^0.147.4",
+    "@sanity/default-login": "^0.147.0",
+    "@sanity/desk-tool": "^0.147.5",
+    "prop-types": "^15.6.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "publishConfig": {
+    "registry": "https://stacc.jfrog.io/stacc/api/npm/npm/"
+  }
+}
