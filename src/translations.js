@@ -2,7 +2,6 @@ import config from "part:@staccx/i18n/config?"
 
 const allowKeyChange = config ? config.allowKeyChange || false : process.env.NODE_ENV !== "development"
 const showNamespaces = config ? config.showNamespaces || false : false
-console.log(allowKeyChange)
 export default {
   title: "Translations",
   name: "translations",
