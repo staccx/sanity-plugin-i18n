@@ -13,6 +13,10 @@
       "description": "Blockoptions for localeRichText"
     },
     {
+      "name": "part:@staccx/i18n/config",
+      "description": "Configurations for translations"
+    },
+    {
       "implements": "part:@sanity/base/schema-type",
       "path": "translations.js"
     },

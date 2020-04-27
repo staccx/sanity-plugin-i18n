@@ -1,3 +1,8 @@
+import config from "part:@staccx/i18n/config?"
+
+const allowKeyChange = config ? config.allowKeyChange || false : process.env.NODE_ENV !== "development"
+const showNamespaces = config ? config.showNamespaces || false : false
+console.log(allowKeyChange)
 export default {
   title: "Translations",
   name: "translations",
@@ -13,12 +18,13 @@ export default {
       title: "Key",
       name: "i18nKey",
       type: "slug",
-      options: {
+      ...(allowKeyChange && {options: {
         source: "name",
         maxLength: 96,
         auto: true
-      },
-      validation: Rule => Rule.required()
+      }}),
+      validation: Rule => Rule.required(),
+      readOnly: !allowKeyChange
     },
     {
       title: "Value",
@@ -28,7 +34,8 @@ export default {
     {
       title: "Namespace",
       name: "namespace",
-      type: "string"
+      type: "string",
+      hidden: !showNamespaces
     }
   ]
 }
