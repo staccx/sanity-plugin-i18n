@@ -31,17 +31,8 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/preset-react": "^7.0.0",
+    "nodemon": "^2.0.4"
   },
-  "dependencies": {
-    "@sanity/base": "^0.147.3",
-    "@sanity/components": "^0.147.3",
-    "@sanity/core": "^0.147.3",
-    "@sanity/default-layout": "^0.147.4",
-    "@sanity/default-login": "^0.147.0",
-    "@sanity/desk-tool": "^0.147.5",
-    "prop-types": "^15.6.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  }
+  "dependencies": {}
 }
