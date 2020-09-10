@@ -1,4 +1,5 @@
 import blockOptions from "part:@staccx/i18n/blockOptions?"
+import languages from "part:@staccx/i18n/languages?"
 
 import { getFields, fieldsets } from "./supportedLanguages"
 
@@ -18,7 +19,7 @@ export default {
   ]),
   preview: {
     select: {
-      title: "nb"
+      title: ((languages || [])[0].id || "nb")
     },
 
     prepare(selection) {
