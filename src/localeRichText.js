@@ -4,9 +4,6 @@ import { getFields, fieldsets } from "./supportedLanguages"
 
 const options = blockOptions || {}
 
-console.log(options)
-
-console.log("here")
 export default {
   title: "Localized Rich text",
   name: "localeRichText",
