@@ -1,22 +1,30 @@
 import blockOptions from "part:@staccx/i18n/blockOptions?"
 import languages from "part:@staccx/i18n/languages?"
+import config from "part:@staccx/i18n/config?"
 
 import { getFields, fieldsets } from "./supportedLanguages"
 
 const options = blockOptions || {}
+
+const data = (config && config.noImage) ? [
+  {
+    type: "block",
+    ...options
+  }
+] : [
+  {
+    type: "block",
+    ...options
+  },
+  { type: "image" }
+]
 
 export default {
   title: "Localized Rich text",
   name: "localeRichText",
   type: "object",
   fieldsets,
-  fields: getFields("array", [
-    {
-      type: "block",
-      ...options
-    },
-    { type: "image" }
-  ]),
+  fields: getFields("array", data),
   preview: {
     select: {
       title: ((languages || [])[0].id || "nb")
