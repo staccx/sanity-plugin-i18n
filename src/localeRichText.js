@@ -1,22 +1,17 @@
+import blocks from "part:@staccx/i18n/blocks?"
 import blockOptions from "part:@staccx/i18n/blockOptions?"
 import languages from "part:@staccx/i18n/languages?"
 import config from "part:@staccx/i18n/config?"
 
 import { getFields, fieldsets } from "./supportedLanguages"
 
-const options = blockOptions || {}
-
-const data = (config && config.noImage) ? [
+const data = [
   {
     type: "block",
-    ...options
-  }
-] : [
-  {
-    type: "block",
-    ...options
+    ...(blockOptions || {})
   },
-  { type: "image" }
+    ...((config && !config.noImage) ? [{type: "image"}] : []),
+    ...(blocks || [])
 ]
 
 export default {
