@@ -17,6 +17,10 @@
       "description": "Configurations for translations"
     },
     {
+      "name": "part:@staccx/i18n/blocks",
+      "description": "Additional blocks to be used in the rich text"
+    },
+    {
       "implements": "part:@sanity/base/schema-type",
       "path": "translations.js"
     },
