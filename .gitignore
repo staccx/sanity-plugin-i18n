@@ -32,4 +32,5 @@ vCards
 yalc.lock
 
 temp
-/stories/stories.generated.js
+
+.parcel-cache

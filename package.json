@@ -36,7 +36,6 @@
   "module": "./lib/esm/index.js",
   "types": "./lib/types/index.d.ts",
   "files": [
-    "src",
     "lib",
     "v2-incompatible.js",
     "sanity.json"
