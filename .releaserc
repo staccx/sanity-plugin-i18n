@@ -2,8 +2,8 @@
   "branches": [
     "main",
     {
-      "name": "next",
-      "channel": "next"
+      "name": "studioV3",
+      "channel": "studiov3"
     }
   ],
   "plugins": [

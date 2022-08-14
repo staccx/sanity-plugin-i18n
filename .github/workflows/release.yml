@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - next
+      - studioV3
 
 concurrency:
   group: release-${{ github.ref }}-1
