@@ -1,4 +1,4 @@
-import { getFields, getPreview } from "./utils";
+import { getFields, getGroups, getPreview } from "./utils";
 import type { i18nConfig } from "./i18nConfig";
 
 export function getLocaleStringSchema(config: i18nConfig): any {
@@ -6,13 +6,7 @@ export function getLocaleStringSchema(config: i18nConfig): any {
     title: "LocalizedString",
     name: "localeString",
     type: "object",
-    fieldsets: [
-      {
-        title: "Translations",
-        name: "translations",
-        options: { collapsable: true },
-      },
-    ],
+    groups: getGroups(config),
     fields: getFields("string", config),
     preview: getPreview(config),
   };

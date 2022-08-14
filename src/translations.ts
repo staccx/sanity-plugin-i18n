@@ -1,6 +1,6 @@
 import type { Rule } from "sanity";
 import type { i18nConfig } from "./i18nConfig";
-import { toPlainText } from "./utils";
+import { getGroups, toPlainText } from "./utils";
 
 export function getTranslationSchemaType(config: i18nConfig) {
   const allowKeyChange = config?.allowKeyChange ?? false;

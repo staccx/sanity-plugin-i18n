@@ -1,4 +1,4 @@
-import { fieldsets, getFields, toPlainText } from "./utils";
+import { getFields, getGroups, toPlainText } from "./utils";
 import type { i18nConfig } from "./i18nConfig";
 
 export function getLocalizedRichTextSchema(config: i18nConfig): any {
@@ -13,7 +13,7 @@ export function getLocalizedRichTextSchema(config: i18nConfig): any {
     title: "Localized Rich text",
     name: "localeRichText",
     type: "object",
-    fieldsets,
+    groups: getGroups(config),
     fields: getFields("array", config, data),
     preview: {
       select: {

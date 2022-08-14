@@ -34,7 +34,7 @@ export function getFields(type: string, config: i18nConfig, o: any = null) {
     name: lang.id,
     type: type,
     ...(o && { of: o }),
-    fieldset: lang?.isDefault ? null : "translations",
+    group: `${type}-${lang.id}`,
   }));
 }
 export function getPreview(config: i18nConfig) {
@@ -51,10 +51,10 @@ export function getPreview(config: i18nConfig) {
     },
   };
 }
-export const fieldsets = [
-  {
-    title: "Translations",
-    name: "translations",
-    options: { collapsable: true },
-  },
-];
+export function getGroups(config: i18nConfig) {
+  return config.languages.map((lang: Language) => ({
+    name: `${lang.id}`,
+    title: lang.title,
+    default: lang.isDefault,
+  }));
+}

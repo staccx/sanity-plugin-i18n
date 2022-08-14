@@ -31,7 +31,7 @@ export interface i18nConfig {
   languages: Language[];
   blocks?: Block[] | any[];
   options?: BlockOptions;
-  allowKeyChange: boolean;
-  isNamespaceEnabled: boolean;
+  allowKeyChange?: boolean;
+  isNamespaceEnabled?: boolean;
   typeMask: TypeMask;
 }

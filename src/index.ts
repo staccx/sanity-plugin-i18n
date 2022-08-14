@@ -1,5 +1,5 @@
 import { createPlugin } from "sanity";
-import type { i18nConfig } from "./i18nConfig";
+import type { i18nConfig, Language } from "./i18nConfig";
 import { TypeMask } from "./i18nConfig";
 import { isTypeMaskEnabled } from "./utils";
 import { getTranslationValueSchema } from "./translationValue";
@@ -15,7 +15,7 @@ const defaultConfig: i18nConfig = {
   isNamespaceEnabled: true,
 };
 
-export const i18n = createPlugin<i18nConfig>((config) => {
+export const i18nPlugin = createPlugin<i18nConfig>((config) => {
   const configWithDefaults = Object.assign({}, defaultConfig, config);
 
   const stringTypeEnabled = isTypeMaskEnabled(
@@ -46,3 +46,5 @@ export const i18n = createPlugin<i18nConfig>((config) => {
     },
   };
 });
+
+export { TypeMask, Language };
