@@ -1,44 +1,8 @@
 {
-  "paths": {
-    "source": "./src",
-    "compiled": "./lib"
-  },
   "parts": [
     {
-      "name": "part:@staccx/i18n/languages",
-      "description": "Languages to be used in the app"
-    },
-    {
-      "name": "part:@staccx/i18n/blockOptions",
-      "description": "Blockoptions for localeRichText"
-    },
-    {
-      "name": "part:@staccx/i18n/config",
-      "description": "Configurations for translations"
-    },
-    {
-      "name": "part:@staccx/i18n/blocks",
-      "description": "Additional blocks to be used in the rich text"
-    },
-    {
-      "implements": "part:@sanity/base/schema-type",
-      "path": "translations.js"
-    },
-    {
-      "implements": "part:@sanity/base/schema-type",
-      "path": "translationValue.js"
-    },
-    {
-      "implements": "part:@sanity/base/schema-type",
-      "path": "localeString.js"
-    },
-    {
-      "implements": "part:@sanity/base/schema-type",
-      "path": "localeText.js"
-    },
-    {
-      "implements": "part:@sanity/base/schema-type",
-      "path": "localeRichText.js"
+      "implements": "part:@sanity/base/sanity-root",
+      "path": "./v2-incompatible.js"
     }
   ]
 }

@@ -1,38 +1,64 @@
 {
   "name": "@staccx/sanity-plugin-i18n",
   "version": "11.3.0",
-  "description": "",
-  "main": "lib/translations.js",
-  "module": "lib/translations.js",
-  "author": "Stacc X",
-  "license": "UNLICENSED",
-  "files": [
-    "lib",
-    "src",
-    "sanity.json"
-  ],
+  "description": "Field level translations",
+  "license": "MIT",
+  "author": {
+    "email": "espen.saeverud@gmail.com",
+    "name": "Espen Th Sæverud",
+    "url": "https://github.com/XSlemX"
+  },
   "scripts": {
-    "start": "sanity start",
-    "test": "sanity check",
-    "build": "babel --root-mode upward src -d lib",
-    "build:watch": "nodemon --watch src/ --exec \"babel src -d lib\"",
-    "prepare": "yarn build"
+    "prebuild": "plugin-kit verify-package --silent",
+    "build": "parcel build --no-cache",
+    "watch": "parcel watch",
+    "test": "jest",
+    "link-watch": "plugin-kit link-watch",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "keywords": [
-    "sanity"
+    "sanity",
+    "plugin",
+    "i18n",
+    "internalization"
   ],
-  "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "@babel/plugin-external-helpers": "^7.14.5",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/plugin-proposal-decorators": "^7.15.8",
-    "@babel/plugin-proposal-export-default-from": "^7.14.5",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.14.5",
-    "nodemon": "^2.0.13"
+  "source": "./src/index.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/cjs/index.js",
+      "default": "./lib/esm/index.js"
+    }
   },
-  "dependencies": {}
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "src",
+    "lib",
+    "v2-incompatible.js",
+    "sanity.json"
+  ],
+  "dependencies": {
+    "@sanity/incompatible-plugin": "^0.0.1-studio-v3.1",
+    "sanity": "^3.0.0-dev-preview.12"
+  },
+  "devDependencies": {
+    "@parcel/packager-ts": "2.7.0",
+    "@parcel/transformer-typescript-types": "2.7.0",
+    "@sanity/plugin-kit": "^0.1.0-v3-studio.1",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "^28.1.6",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-sanity": "^6.0.0",
+    "parcel": "^2.7.0",
+    "prettier": "^2.7.1",
+    "sanipack": "^2.1.0",
+    "semantic-release": "^19.0.3",
+    "typescript": ">=4.7.4"
+  }
 }
