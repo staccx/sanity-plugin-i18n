@@ -34,7 +34,7 @@ export function getFields(type: string, config: i18nConfig, o: any = null) {
     name: lang.id,
     type: type,
     ...(o && { of: o }),
-    group: `${type}-${lang.id}`,
+    group: `${lang.id}`,
   }));
 }
 export function getPreview(config: i18nConfig) {
