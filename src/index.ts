@@ -42,7 +42,12 @@ export const i18nPlugin = createPlugin<i18nConfig>((config) => {
   return {
     name: "stacc-sanity-plugin-i18n",
     schema: {
-      types: [...objects, getTranslationSchemaType(configWithDefaults)],
+      types: [
+        ...objects,
+        ...(!config.isDocumentTypeHidden
+          ? [getTranslationSchemaType(configWithDefaults)]
+          : []),
+      ],
     },
   };
 });

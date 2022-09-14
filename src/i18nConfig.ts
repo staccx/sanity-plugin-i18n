@@ -34,4 +34,5 @@ export interface i18nConfig {
   allowKeyChange?: boolean;
   isNamespaceEnabled?: boolean;
   typeMask: TypeMask;
+  isDocumentTypeHidden?: boolean;
 }
