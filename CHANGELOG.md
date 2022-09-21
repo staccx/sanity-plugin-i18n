@@ -1,3 +1,15 @@
+# [13.0.0](https://github.com/staccx/sanity-plugin-i18n/compare/v12.1.0...v13.0.0) (2022-09-21)
+
+
+### chore
+
+* forcing major bump to avoid wrongful installs ([cab8446](https://github.com/staccx/sanity-plugin-i18n/commit/cab84464ca81726f173267ba487962dddb053da8))
+
+
+### BREAKING CHANGES
+
+* Studio v3 version
+
 # [12.1.0](https://github.com/staccx/sanity-plugin-i18n/compare/v12.0.0...v12.1.0) (2022-09-14)
 
 
