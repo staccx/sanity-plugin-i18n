@@ -1,3 +1,16 @@
+# [12.1.0](https://github.com/staccx/sanity-plugin-i18n/compare/v12.0.0...v12.1.0) (2022-09-14)
+
+
+### Bug Fixes
+
+* grouping ([b1c293c](https://github.com/staccx/sanity-plugin-i18n/commit/b1c293cce5e90efb8ee42183d0bf55969b51f30b))
+* grouping. exporting types needed ([cb48018](https://github.com/staccx/sanity-plugin-i18n/commit/cb48018416c7cb6d6f438c2668e3d2844e8b6122))
+
+
+### Features
+
+* add ability to hide document type and only use as type in other ([9cfe930](https://github.com/staccx/sanity-plugin-i18n/commit/9cfe930f7d07666b09167aea923b279369aad632))
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
